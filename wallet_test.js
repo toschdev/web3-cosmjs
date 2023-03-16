@@ -1,15 +1,18 @@
-const Wallet = require("./src/wallet");
+const Wallet = require('./src/wallet');
 
 (async () => {
   const wallet = new Wallet();
 
   // Generate a new wallet
-  await wallet.generate();
-  console.log("Mnemonic:", wallet.getMnemonic());
-  console.log("Address:", await wallet.getAccount());
+  const new_wallet = await wallet.generate();
+  console.log('Generated Mnemonic:', wallet.getMnemonic());
 
-  // Load a wallet from a given mnemonic
-  const mnemonic = "your mnemonic here";
-  await wallet.loadFromMnemonic(mnemonic);
-  console.log("Loaded Address:", await wallet.getAccount());
+  // Load a wallet from an existing mnemonic
+  const existingMnemonic = wallet.getMnemonic();
+  await wallet.loadFromMnemonic(existingMnemonic);
+  console.log('Loaded Mnemonic:', wallet.getMnemonic());
+
+  // Get account information
+  const account = await wallet.getAccount();
+  console.log('Account:', account);
 })();

@@ -14,13 +14,13 @@ const Web3CosmJS = require('./src/web3cosmjs');
 //   }
 // })();
 
-(async () => {
-  const senderPrivateKey = "..."; // Replace with a valid private key
-  const recipientAddress = "cosmos1..."; // Replace with a valid Cosmos address
-  const amount = 1000; // Replace with the desired amount to send (in base units)
+// (async () => {
+//   const senderPrivateKey = "..."; // Replace with a valid private key
+//   const recipientAddress = "cosmos1..."; // Replace with a valid Cosmos address
+//   const amount = 1000; // Replace with the desired amount to send (in base units)
 
-  web3CosmJS
-    .sendTransaction(senderPrivateKey, recipientAddress, amount)
-    .then(console.log)
-    .catch(console.error);
-})();
+//   Web3CosmJS
+//     .sendTransaction(senderPrivateKey, recipientAddress, amount)
+//     .then(console.log)
+//     .catch(console.error);
+// })();

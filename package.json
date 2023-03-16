@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cosmjs/amino": "^0.30.0",
     "@cosmjs/cosmwasm-stargate": "^0.30.0",
     "@cosmjs/crypto": "^0.30.0",
     "@cosmjs/faucet": "^0.30.0",
