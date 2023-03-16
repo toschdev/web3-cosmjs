@@ -35,7 +35,7 @@ const web3CosmJS = new Web3CosmJS(rpcUrl);
 
 To query the balance of a Cosmos address, use the getBalance method:
 
-```
+```javascript
 const address = "cosmos1..."; // Replace with a valid Cosmos address
 web3CosmJS.getBalance(address).then(console.log).catch(console.error);
 ```
@@ -44,7 +44,7 @@ web3CosmJS.getBalance(address).then(console.log).catch(console.error);
 
 To query the transaction count (nonce) for a Cosmos address, use the `getTransactionCount` method:
 
-```
+```javascript
 const address = "cosmos1..."; // Replace with a valid Cosmos address
 web3CosmJS.getTransactionCount(address).then(console.log).catch(console.error);
 ```
@@ -53,7 +53,7 @@ web3CosmJS.getTransactionCount(address).then(console.log).catch(console.error);
 
 To send a transaction, use the `sendTransaction` method:
 
-```
+```javascript
 const senderPrivateKey = "..."; // Replace with a valid private key
 const recipientAddress = "cosmos1..."; // Replace with a valid Cosmos address
 const amount = 1000; // Replace with the desired amount to send (in base units)
@@ -66,7 +66,7 @@ web3CosmJS
 
 ## Broadcast Message
 
-```
+```javascript
 const senderPrivateKey = "..."; // Replace with a valid private key
 const message = {
   type: "...",
@@ -81,7 +81,7 @@ web3CosmJS
 
 ## Calculate Transaction Fees
 
-```
+```javascript
 const message = {
   type: "...",
   value: { ... },
