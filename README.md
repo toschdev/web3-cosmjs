@@ -27,39 +27,68 @@ Web3CosmJS is a wrapper library that provides a Web3.js-like API for interacting
 
 ```javascript
 const Web3CosmJS = require("web3-cosmjs");
-
-// Replace with your Cosmos node RPC URL
-const rpcUrl = "http://localhost:26657";
+const rpcUrl = "http://localhost:26657"; // Replace with the actual RPC URL of your Cosmos node
 const web3CosmJS = new Web3CosmJS(rpcUrl);
-
-// Use the Web3CosmJS instance to interact with the Cosmos network
-
 ```
 
-## Examples
+## Query Account Balance
 
-Here are some basic examples of how to use the Web3CosmJS library:
-
-## Get balance
+To query the balance of a Cosmos address, use the getBalance method:
 
 ```
-const address = "cosmos1...";
-const balance = await web3CosmJS.getBalance(address);
-console.log(`Balance of ${address}:`, balance);
+const address = "cosmos1..."; // Replace with a valid Cosmos address
+web3CosmJS.getBalance(address).then(console.log).catch(console.error);
 ```
 
-## Send transaction
+## Query Transaction Count (Nonce)
+
+To query the transaction count (nonce) for a Cosmos address, use the `getTransactionCount` method:
 
 ```
-// Add your implementation for sending transactions
-Sign transaction
+const address = "cosmos1..."; // Replace with a valid Cosmos address
+web3CosmJS.getTransactionCount(address).then(console.log).catch(console.error);
 ```
 
-## Sign transaction
+## Send Transaction
+
+To send a transaction, use the `sendTransaction` method:
 
 ```
-// Add your implementation for signing transactions
-For more examples, please refer to the examples directory.
+const senderPrivateKey = "..."; // Replace with a valid private key
+const recipientAddress = "cosmos1..."; // Replace with a valid Cosmos address
+const amount = 1000; // Replace with the desired amount to send (in base units)
+
+web3CosmJS
+  .sendTransaction(senderPrivateKey, recipientAddress, amount)
+  .then(console.log)
+  .catch(console.error);
+```
+
+## Broadcast Message
+
+```
+const senderPrivateKey = "..."; // Replace with a valid private key
+const message = {
+  type: "...",
+  value: { ... },
+}; // Replace with a valid Cosmos message object
+
+web3CosmJS
+  .broadcastMessage(senderPrivateKey, message)
+  .then(console.log)
+  .catch(console.error);
+```
+
+## Calculate Transaction Fees
+
+```
+const message = {
+  type: "...",
+  value: { ... },
+}; // Replace with a valid Cosmos message object
+const gasLimit = 200000; // Replace with an appropriate gas limit
+
+web3CosmJS.calculateFees(message, gasLimit).then(console.log).catch(console.error);
 ```
 
 ## Contributing
