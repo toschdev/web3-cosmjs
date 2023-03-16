@@ -31,6 +31,8 @@ const rpcUrl = "http://localhost:26657"; // Replace with the actual RPC URL of y
 const web3CosmJS = new Web3CosmJS(rpcUrl);
 ```
 
+We're currently working to bring https://rpc-cosmos.sg-1.online:443 for you permanently available.
+
 ## Query Account Balance
 
 To query the balance of a Cosmos address, use the getBalance method:
