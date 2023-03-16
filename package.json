@@ -1,0 +1,19 @@
+{
+  "name": "web3-cosmjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "^0.30.0",
+    "@cosmjs/crypto": "^0.30.0",
+    "@cosmjs/faucet": "^0.30.0",
+    "@cosmjs/stargate": "^0.30.0",
+    "web3": "^1.8.2"
+  }
+}
