@@ -24,3 +24,19 @@ const Web3CosmJS = require('./src/web3cosmjs');
 //     .then(console.log)
 //     .catch(console.error);
 // })();
+
+
+// Create wallet, fund and send back
+
+// (async () => {
+//     const Wallet = require('./src/wallet');
+
+//     const wallet = new Wallet();
+//     await wallet.generate();
+
+//     const passphrase = wallet.mnemonic;
+//     const account = await wallet.getAccount();
+
+//     console.log(passphrase);
+//     console.log(account);
+// })();
