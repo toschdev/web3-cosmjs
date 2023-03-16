@@ -93,7 +93,7 @@ web3CosmJS.calculateFees(message, gasLimit).then(console.log).catch(console.erro
 
 ## Contributing
 
-Contributions are welcome! Please read the contributing guide for more information on how to contribute to this project.
+Contributions are welcome! Please read the [contributing](./Contributing.md) guide for more information on how to contribute to this project.
 
 ## License
 
